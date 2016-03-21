@@ -1,7 +1,7 @@
 <div class="page-header row top-menu">
     <div class="col-md-6">
         <h2>
-            <a href="{{url_for('hello')}}">
+            <a href="{{url_for('home')}}">
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
             </a>
         </h2>
@@ -16,11 +16,11 @@
     <div class="col-md-1 text-right">
         <div class="login_logout">
                 {% if user %}
-                    <a href="{{url_for('hello')}}" class="btn btn-default">Logout</a>
+                    <a href="{{url_for('home')}}" class="btn btn-default">Logout</a>
                 {% elif login %}
                     <div class=""></div>
                 {% else %}
-                    <a href="{{url_for('hello')}}" class="btn btn-default">Login</a>
+                    <a href="{{url_for('home')}}" class="btn btn-default">Login</a>
                 {% endif %}
         </div>
     </div>

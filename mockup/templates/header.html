@@ -1,23 +1,56 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+                <span class = "sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{{url_for('home')}}">
-                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            </a>
+            <a class="navbar-brand" href="{{url_for('home')}}">Legacy</a>
         </div>
-
-        <div class="collapse navbar-collapse">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-default btn-lg navbar-right" aria-label="Choose Language">
+                <span class="glyphicon glyphicon-globe"></span>
+            </button>
+        </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="#">
+                    <button type="button btn-flag" class="btn btn-default">
+                        <span class="flag-icon flag-icon-co"></span>
+                    </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <button type="button btn-flag" class="btn btn-default">
+                        <span class="flag-icon flag-icon-kr"></span>
+                    </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <button type="button btn-flag" class="btn btn-default">
+                        <span class="flag-icon flag-icon-jp"></span>
+                    </button>
+                    </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                    <a href="#">
+                    <button type="button btn-flag" class="btn btn-default">
+                        <span class="flag-icon flag-icon-us"></span>
+                    </button>
+                    </a>
+                </li>
+            </ul>
+        <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="{{url_for('about')}}" class="">About</a></li>
-                <li><a href="{{url_for('team')}}" class="">Team</a></li>
-                <li><a href="{{url_for('news')}}" class="">News</a></li>
-                <li><a href="{{url_for('contact')}}" class="">Contact</a></li>
+                <li><a href="{{url_for('about')}}" >About</a></li>
+                <li><a href="{{url_for('team')}}" >Team</a></li>
+                <li><a href="{{url_for('news')}}" >News</a></li>
+                <li><a href="{{url_for('contact')}}" >Contact</a></li>
             </ul>
         </div>
     </div>

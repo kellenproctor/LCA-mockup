@@ -15,17 +15,27 @@
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='normalize.css') }}">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='flag-icon.css') }}">
         {% block scripts %}
         {% endblock %}
     </head>
 
     <body>
-        <div class="container fill main-con">
-            {% include "header.html" %}
+        {% include "header.html" %}
+
+        {% block carousel %}
+        {% endblock %}
+
+        <div class="container main-con">
             {% block content %}
             {% endblock %}
         </div>
-        {% block footer %}
-        {% endblock %}
+
+        <!-- Footer here for testing -->
+        <!-- {% include "footer.html" %} -->
+
+        <!-- Latest compiled and minified JavaScript and JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -1,7 +1,10 @@
 $bg-color: white;
-$test-color: #c2f0c2;
+$test-color: white;
 $foot-color: #f5f5f5;
 $carousel-margin-top: 0px;
+$pic-width: 1441px;
+$footer-height: 150px;
+
 
 /** {
     outline: 1px solid red;
@@ -21,7 +24,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: $footer-height;
 }
 
 /*.navbar {
@@ -34,14 +37,29 @@ body {
     margin-top: 3px;
 }
 
-.main-con {
-    background-color: $bg-color;
-    height: 100%;
-    margin-top: 70px;
+div.item img {
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: $pic-width;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+    
+  /* Set up positioning */
+  position: relative;
 }
 
-.carousel {
-    width: 100%;
+@media screen and (max-width: $pic-width) { /* Specific to this particular image */
+  div.item img {
+    left: 50%;
+    margin-left: -$pic-width/2;   /* 50% */
+  }
+}
+
+.carousel, .carousel-inner {
+    width: auto;
+    height: auto;
     margin-top: $carousel-margin-top;
 }
 
@@ -56,11 +74,18 @@ a.right.carousel-control:active .car-con {
     visibility: visible;
 }
 
+.main-con {
+    background-color: $bg-color;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: $foot-color;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: $footer-height;
+    background-color: $foot-color;
 }
